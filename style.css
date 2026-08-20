@@ -1,0 +1,301 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #080b12;
+    color: #f5f7fa;
+    line-height: 1.6;
+}
+
+/* NAVBAR */
+
+header {
+    background: #0c1018;
+    border-bottom: 1px solid #1b2230;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar {
+    max-width: 1100px;
+    margin: auto;
+    height: 70px;
+    padding: 0 25px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.logo span {
+    color: #00d9ff;
+}
+
+.menu {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.menu a {
+    color: #aeb7c6;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.menu a:hover {
+    color: #00d9ff;
+}
+
+/* HERO */
+
+.hero {
+    min-height: 600px;
+
+    display: flex;
+    align-items: center;
+
+    background:
+        radial-gradient(
+            circle at 80% 20%,
+            rgba(0, 217, 255, 0.15),
+            transparent 35%
+        ),
+        #080b12;
+}
+
+.hero-content {
+    max-width: 1100px;
+    width: 100%;
+    margin: auto;
+    padding: 80px 25px;
+}
+
+.tag {
+    color: #00d9ff;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.hero h1 {
+    max-width: 750px;
+    margin: 15px 0;
+
+    font-size: clamp(45px, 7vw, 78px);
+    line-height: 1.05;
+}
+
+.hero p {
+    max-width: 650px;
+    color: #9ca7b7;
+    font-size: 18px;
+    margin-bottom: 35px;
+}
+
+.button {
+    display: inline-block;
+
+    padding: 13px 24px;
+
+    background: #00d9ff;
+    color: #061018;
+
+    text-decoration: none;
+    font-weight: bold;
+
+    border-radius: 6px;
+
+    transition: 0.3s;
+}
+
+.button:hover {
+    background: #72eaff;
+    transform: translateY(-2px);
+}
+
+/* ARTICLES */
+
+.articles {
+    max-width: 1100px;
+    margin: auto;
+    padding: 100px 25px;
+}
+
+.section-title {
+    margin-bottom: 40px;
+}
+
+.section-title span {
+    color: #00d9ff;
+    font-size: 13px;
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+
+.section-title h2 {
+    font-size: 36px;
+    margin-top: 8px;
+}
+
+.article-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.card {
+    background: #0e131c;
+    border: 1px solid #1c2533;
+    border-radius: 10px;
+    overflow: hidden;
+
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-7px);
+    border-color: #00d9ff;
+}
+
+.card-image {
+    height: 190px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 45px;
+    font-weight: bold;
+}
+
+.blue {
+    background: linear-gradient(135deg, #0066ff, #00d9ff);
+}
+
+.purple {
+    background: linear-gradient(135deg, #6c2cff, #c13cff);
+}
+
+.green {
+    background: linear-gradient(135deg, #00a878, #00d9a5);
+}
+
+.card-content {
+    padding: 25px;
+}
+
+.category {
+    color: #00d9ff;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.card h3 {
+    margin: 10px 0;
+    font-size: 21px;
+}
+
+.card p {
+    color: #8e99a9;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.card a {
+    color: #00d9ff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* SOBRE */
+
+.about {
+    background: #0d121b;
+    border-top: 1px solid #1b2230;
+    border-bottom: 1px solid #1b2230;
+
+    padding: 100px 25px;
+}
+
+.about > div {
+    max-width: 800px;
+    margin: auto;
+}
+
+.about h2 {
+    font-size: 40px;
+    margin: 12px 0;
+}
+
+.about p {
+    color: #9ca7b7;
+    font-size: 17px;
+}
+
+/* FOOTER */
+
+footer {
+    max-width: 1100px;
+    margin: auto;
+    padding: 30px 25px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    color: #697384;
+    font-size: 14px;
+}
+
+.social {
+    display: flex;
+    gap: 20px;
+}
+
+.social a {
+    color: #697384;
+    text-decoration: none;
+}
+
+.social a:hover {
+    color: #00d9ff;
+}
+
+/* RESPONSIVO */
+
+@media (max-width: 800px) {
+
+    .menu {
+        display: none;
+    }
+
+    .article-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero {
+        min-height: 500px;
+    }
+
+    footer {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+}
